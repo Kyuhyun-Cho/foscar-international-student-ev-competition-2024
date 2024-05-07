@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/foscar/ISEV_2024/devel/lib/python3/dist-packages",
+        "/home/foscar/tarang_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/foscar/ISEV_2024/devel/lib/python3/dist-packages",
+        "/home/foscar/tarang_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

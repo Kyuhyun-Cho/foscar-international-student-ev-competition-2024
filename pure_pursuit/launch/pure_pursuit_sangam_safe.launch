@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <!-- <include file="$(find lidar_object_detection)/launch/object_detection_sangam.launch"/> -->
+    <include file="$(find lidar_cam_fusion)/launch/sensor_fusion_sangam.launch" />
+    <include file="$(find lane_pkg)/launch/lane_detection.launch"/>
+    <node pkg="traffic_light_detection" type="traffic_light_detection.py" name="traffic_light_detection"/>
+    <node pkg="pure_pursuit" type="pure_pursuit_sangam_safe.py" name="pure_pursuit" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pure_pursuit)/rviz/pure_pursuit_sangam.rviz" />
+</launch>

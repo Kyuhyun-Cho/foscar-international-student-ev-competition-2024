@@ -1,0 +1,14 @@
+<launch>
+    <!-- YOLO -->
+    <include file="$(find ultralytics_ros)/launch/tracker_sangam.launch" />
+
+    <!-- LiDAR -->
+    <include file="$(find lidar_object_detection)/launch/object_detection_sangam.launch" />
+    <!-- <node pkg="lidar_object_detection" type="object_detection_sangam" name="object_detection_sangam" /> -->
+
+    <!-- Fusion -->
+    <node pkg="lidar_cam_fusion" type="sensor_fusion_sangam.py" name="sensor_fusion" output="screen"/>
+
+    <!-- Visualization-->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_object_detection)/rviz/object_detection.rviz" /> -->
+</launch>

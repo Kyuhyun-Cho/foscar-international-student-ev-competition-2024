@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+	<node pkg="lidar_object_detection" type="object_detection_wonju" name="object_detection_wonju"/>
+	<!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lidar_object_detection)/rviz/object_detection.rviz" /> -->
+</launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find lidar_cam_fusion)/launch/sensor_fusion_wonju.launch" />
+    <node pkg="pure_pursuit" type="pure_pursuit_wonju.py" name="pure_pursuit" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pure_pursuit)/rviz/pure_pursuit_wonju.rviz" />
+</launch>
